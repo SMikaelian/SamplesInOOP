@@ -45,3 +45,7 @@ print("{} is a {} {} and is {}.".format(a.name, a.category, a.kind, a.status))
 #calling instance methods
 print(a.props())
 print(b.get_travelRate())
+
+class Model(Aircraft):
+    def techSpecs(self, thrust, wingspan, fuelCap, speed, range):
+        
