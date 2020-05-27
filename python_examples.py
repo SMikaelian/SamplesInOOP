@@ -46,6 +46,12 @@ print("{} is a {} {} and is {}.".format(a.name, a.category, a.kind, a.status))
 print(a.props())
 print(b.get_travelRate())
 
-class Model(Aircraft):
-    def techSpecs(self, thrust, wingspan, fuelCap, speed, range):
-        
+#Child class
+class Specs(Aircraft):
+    def __init__(self, thrust, wingspan, fuelCap, speed, range):
+        Aircraft.__init__(self, thrust, wingspan, fuelCap, speed, range)
+        self.thrust= thrust
+        self.wingspan= wingspan
+        self.fuelCap= fuelCap
+        self.speed= speed
+        self.range= range
